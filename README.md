@@ -98,5 +98,12 @@ Tailwind CSS
 
 OpenAI API
 
+## env
+```bash
+# .env.local
+OPENAI_API_KEY=your-api-key-here
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+```
+
 ## License
 MIT

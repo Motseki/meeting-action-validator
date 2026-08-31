@@ -40,3 +40,12 @@ src/
 │   ├── skills/       # Skills (Company knowledge, PM tools)
 │   └── prompts/      # AI prompt templates
 └── types/            # TypeScript types
+
+Technology
+Next.js 14 (App Router)
+
+TypeScript
+
+Tailwind CSS
+
+OpenAI API

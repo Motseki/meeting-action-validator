@@ -17,7 +17,7 @@ This tool uses a multi-agent AI system to:
 
 ## How It Works
 
-
+Meeting Transcript → Extractor Agent → Validator Agent → Enricher Agent → Ready Tasks
 - **Extractor Agent** - Scans the transcript and identifies all potential action items
 - **Validator Agent** - Checks each item for owner, deliverable, and deadline
 - **Enricher Agent** - Suggests missing owners, deadlines, and detects duplicate tasks

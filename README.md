@@ -57,6 +57,21 @@ Open http://localhost:3000 on your browser to use the app.
 3. Review the results - Valid items show ✅, incomplete items show ⚠️
 ```
 
+## Example
+### Input:
+```bash
+Sarah: The login page is still showing errors. I'll look into the authentication flow.
+Mike: I'll update the API documentation. 
+Alex: The client wants a demo by Friday.
+```
+
+### Output:
+```bash
+✅ Sarah: Fix authentication flow (Deadline: Friday)
+✅ Mike: Update API documentation
+⚠️ Alex: Prepare client demo (Missing: deliverable, deadline)
+```
+
 src/
 ├── app/              # Next.js pages and API routes
 ├── components/       # React components

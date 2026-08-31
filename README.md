@@ -42,6 +42,11 @@ Create a .env.local file in the root directory and add your OpenAI API key:
 OPENAI_API_KEY=your-api-key-here
 ```
 
+### 4. Run the development server
+```bash
+npm run dev
+```
+
 src/
 ├── app/              # Next.js pages and API routes
 ├── components/       # React components

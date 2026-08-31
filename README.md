@@ -29,3 +29,4 @@ This tool uses a multi-agent AI system to:
 ```bash
 git clone https://github.com/yourusername/meeting-action-validator.git
 cd meeting-action-validator
+npm install

@@ -16,3 +16,16 @@ This tool uses a multi-agent AI system to:
 - Flag items needing clarification
 
 ## How It Works
+
+
+- **Extractor Agent** - Scans the transcript and identifies all potential action items
+- **Validator Agent** - Checks each item for owner, deliverable, and deadline
+- **Enricher Agent** - Suggests missing owners, deadlines, and detects duplicate tasks
+
+## Setup
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/yourusername/meeting-action-validator.git
+cd meeting-action-validator

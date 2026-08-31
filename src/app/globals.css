@@ -19,8 +19,88 @@
   }
 }
 
+/* Base styles */
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== FIX: Better textarea visibility ===== */
+textarea {
+  color: #1a1a1a !important;
+  background-color: #ffffff !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+}
+
+textarea::placeholder {
+  color: #9ca3af !important;
+  font-size: 14px !important;
+}
+
+/* Dark mode textarea fix */
+@media (prefers-color-scheme: dark) {
+  textarea {
+    color: #e5e5e5 !important;
+    background-color: #1a1a1a !important;
+  }
+  
+  textarea::placeholder {
+    color: #6b7280 !important;
+  }
+}
+
+/* ===== Fix: Better button text visibility ===== */
+button {
+  font-weight: 500 !important;
+}
+
+.btn-primary {
+  @apply px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 
+         transition-colors disabled:opacity-50 disabled:cursor-not-allowed 
+         focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+.btn-secondary {
+  @apply px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 
+         transition-colors disabled:opacity-50 disabled:cursor-not-allowed 
+         focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2;
+}
+
+/* ===== Fix: Better card visibility ===== */
+.card {
+  @apply bg-white rounded-lg shadow-sm border border-gray-200 p-6;
+}
+
+/* ===== Fix: Better text colors ===== */
+.text-muted {
+  @apply text-sm text-gray-500;
+}
+
+.text-small {
+  @apply text-xs text-gray-500;
+}
+
+/* ===== Custom scrollbar ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded-full hover:bg-gray-500;
+}
+
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-800;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-600 hover:bg-gray-500;
+  }
 }

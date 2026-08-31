@@ -107,6 +107,46 @@ This shows how the Validator Agent checks each action item:
   }
 }
 ```
+
+## Enricher Agent Trace
+This shows how the Enricher Agent adds missing information:
+```json
+{
+  "agent": "EnricherAgent",
+  "input": {
+    "task": "Fix the login bug",
+    "owner": null,
+    "deadline": null
+  },
+  "steps": [
+    {
+      "step": 1,
+      "thought": "Checking company knowledge for task ownership.",
+      "action": "Querying role map",
+      "result": "Task contains 'login' - likely frontend work"
+    },
+    {
+      "step": 2,
+      "thought": "Suggesting appropriate owner.",
+      "action": "Matching task to team member skills",
+      "result": "Sarah is assigned to frontend tasks"
+    },
+    {
+      "step": 3,
+      "thought": "Checking for duplicate tasks.",
+      "action": "Querying project management tool",
+      "result": "No duplicates found"
+    }
+  ],
+  "output": {
+    "suggestedOwner": "Sarah",
+    "suggestedDeadline": "Friday",
+    "isDuplicate": false,
+    "relatedTasks": []
+  }
+}
+```
+
 ## Setup
 
 ### 1. Clone the repository

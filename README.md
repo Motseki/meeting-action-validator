@@ -69,7 +69,44 @@ This shows how the Extractor Agent processes a meeting transcript:
   ]
 }
 ```
-
+## Validator Agent Trace
+This shows how the Validator Agent checks each action item:
+```json
+{
+  "agent": "ValidatorAgent",
+  "input": {
+    "task": "Fix the login bug",
+    "owner": "Sarah",
+    "deadline": null
+  },
+  "steps": [
+    {
+      "step": 1,
+      "thought": "Checking if this action item is complete.",
+      "action": "Validating required fields",
+      "result": "Task exists, owner exists, deadline missing"
+    },
+    {
+      "step": 2,
+      "thought": "Identifying what's missing.",
+      "action": "Comparing against quality rubric",
+      "result": "Missing deadline. Suggest adding a timeframe."
+    }
+  ],
+  "output": {
+    "isValid": false,
+    "issues": [
+      {
+        "field": "deadline",
+        "message": "Missing deadline",
+        "suggestion": "When should this be completed?"
+      }
+    ],
+    "qualityScore": 3,
+    "suggestions": ["Add a specific deadline"]
+  }
+}
+```
 ## Setup
 
 ### 1. Clone the repository

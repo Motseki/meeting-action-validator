@@ -48,6 +48,15 @@ npm run dev
 ```
 Open http://localhost:3000 on your browser to use the app.
 
+## Usage
+```bash 
+1. Enter a meeting transcript - Paste text, upload a file, or use the example
+
+2. Click "Extract Action Items" - The AI agents process the transcript
+
+3. Review the results - Valid items show ✅, incomplete items show ⚠️
+```
+
 src/
 ├── app/              # Next.js pages and API routes
 ├── components/       # React components

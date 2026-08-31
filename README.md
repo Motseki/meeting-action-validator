@@ -73,8 +73,8 @@ Alex: The client wants a demo by Friday.
 ```
 ## Results
 ```bash
-Metric	Baseline	        Agentic       Solution	      Improvement
-Execution-Ready Items	      32%	          78%	            +46%
+Metric	                    Baseline	             Agentic Solution	      Improvement
+  Execution-Ready Items	        32%	                  78%	                    +46%
 ```
 
 src/

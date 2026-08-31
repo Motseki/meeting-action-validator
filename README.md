@@ -30,3 +30,13 @@ This tool uses a multi-agent AI system to:
 git clone https://github.com/yourusername/meeting-action-validator.git
 cd meeting-action-validator
 npm install
+
+
+src/
+├── app/              # Next.js pages and API routes
+├── components/       # React components
+├── lib/
+│   ├── agents/       # AI agents (Extractor, Validator, Enricher)
+│   ├── skills/       # Skills (Company knowledge, PM tools)
+│   └── prompts/      # AI prompt templates
+└── types/            # TypeScript types

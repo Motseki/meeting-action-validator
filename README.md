@@ -46,7 +46,7 @@ OPENAI_API_KEY=your-api-key-here
 ```bash
 npm run dev
 ```
-Open http://localhost:3000 to use the app.
+Open http://localhost:3000 on your browser.
 
 src/
 ├── app/              # Next.js pages and API routes

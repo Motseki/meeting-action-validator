@@ -77,6 +77,8 @@ Metric	                    Baseline	             Agentic Solution	      Improvem
   Execution-Ready Items	        32%	                  78%	                    +46%
 ```
 
+## Project Structure
+```bash
 src/
 ├── app/              # Next.js pages and API routes
 ├── components/       # React components
@@ -85,8 +87,9 @@ src/
 │   ├── skills/       # Skills (Company knowledge, PM tools)
 │   └── prompts/      # AI prompt templates
 └── types/            # TypeScript types
+```
 
-Technology
+## Technology
 Next.js 14 (App Router)
 
 TypeScript

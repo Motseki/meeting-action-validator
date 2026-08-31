@@ -36,6 +36,11 @@ cd meeting-action-validator
 npm install
 ```
 
+### 3. Set up environment variables
+Create a .env.local file in the root directory and add your OpenAI API key:
+```bash
+OPENAI_API_KEY=your-api-key-here
+```
 
 src/
 ├── app/              # Next.js pages and API routes

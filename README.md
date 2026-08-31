@@ -1,4 +1,4 @@
-Meeting Action Item Validator
+#Meeting Action Item Validator
 Transform vague meeting notes into clear, actionable tasks using AI agents.
 
 Problem

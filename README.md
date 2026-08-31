@@ -18,9 +18,57 @@ This tool uses a multi-agent AI system to:
 ## How It Works
 
 Meeting Transcript → Extractor Agent → Validator Agent → Enricher Agent → Ready Tasks
+
 - **Extractor Agent** - Scans the transcript and identifies all potential action items
 - **Validator Agent** - Checks each item for owner, deliverable, and deadline
 - **Enricher Agent** - Suggests missing owners, deadlines, and detects duplicate tasks
+
+## Agent Traces
+
+### Extractor Agent Trace
+
+This shows how the Extractor Agent processes a meeting transcript:
+
+```json
+{
+  "agent": "ExtractorAgent",
+  "input": "Sarah: We need to fix the login bug. Mike: I'll handle it by Friday.",
+  "steps": [
+    {
+      "step": 1,
+      "thought": "I need to identify all action items in this transcript.",
+      "action": "Scanning for action-oriented phrases",
+      "result": "Found potential tasks: 'fix the login bug', 'handle it by Friday'"
+    },
+    {
+      "step": 2,
+      "thought": "I should identify owners and deadlines for each task.",
+      "action": "Parsing speaker mentions and timeline references",
+      "result": "Sarah mentioned the bug. Mike mentioned handling it. Friday is a deadline."
+    },
+    {
+      "step": 3,
+      "thought": "Format as structured data with fields.",
+      "action": "Convert to JSON with confidence scores",
+      "result": "Extracted 2 action items with varying completeness."
+    }
+  ],
+  "output": [
+    {
+      "task": "Fix the login bug",
+      "owner": "Sarah",
+      "deadline": null,
+      "confidence": 0.6
+    },
+    {
+      "task": "Handle the login bug",
+      "owner": "Mike",
+      "deadline": "Friday",
+      "confidence": 0.8
+    }
+  ]
+}
+```
 
 ## Setup
 

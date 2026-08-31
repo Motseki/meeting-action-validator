@@ -97,3 +97,6 @@ TypeScript
 Tailwind CSS
 
 OpenAI API
+
+## License
+MIT
